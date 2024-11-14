@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de Compras</title>
+    <meta name="author" content="Romulo Guilherme Rosa | @rosadevsolutions">
+    <title>Loja Campinho</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Botões acima do cabeçalho -->
+    <div id="botoes">
+        <button id="btn-campinho" onclick="clicarBotao('campinho')">Campinho Digital</button>
+        <button id="btn-ofertas" onclick="clicarBotao('ofertas')">Ofertas</button>
+        <button id="btn-descontos" onclick="clicarBotao('descontos')">Descontos Incríveis</button>
+    </div>
 
-    <script src="./index.js"></script> <!-- Conectado ao arquivo index.js -->
+    <!-- Cabeçalho com imagem -->
+    <header id="cabecalho">
+        <img src="fundoCabecaLojaCampinho.jpg" alt="Cabeçalho Loja Campinho" id="imagem-cabecalho">
+    </header>
+
+    <h1>Loja da Campinho</h1>
+    <section id="produtos__wrapper">
+        <div id="produtos"></div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <span id="fechar-modal" class="fechar" onclick="fecharModal()">&times;</span>
+            <h2>Receba Descontos e Ofertas</h2>
+            <form id="form-descontos">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Todos os dias algo estará com 5% ou 10% de desconto.</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
-
 </html>
